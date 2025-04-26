@@ -6,8 +6,6 @@
     <title>DinnerWizard</title>
     <link rel="stylesheet" href="./style.css"/>
 </head>
-
-
 <body>
 <div class="container">
     <br><br>
@@ -30,7 +28,6 @@
         </select>
         <br><br>
     </div>
-
     <div class="form-group">
         <label for="radius">Select Distance:</label>
         <br><br>
@@ -41,26 +38,25 @@
             <option value="16093">10 miles</option>
         </select> 
     </div>
-
     <br><br>    
     <table class="table table-bordered table-striped" id="places"></table>
 </div>
 
 </body>
 
-
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBD5IALn7vlk64h-ImW1Lv3A4CCT3ytKU0&libraries=places&v=weekly&callback=initMap"
     type="text/javascript" async defer>
     </script>
 
-<script>  //Creating the map after a location has been set.
+<script>  //JavaScript functions below.
+    //Creating the map after a location has been set with the Autocomplete SearchBar.
     function initMap() {
         autocomplete = new google.maps.places.Autocomplete(document.getElementById('autocomplete'), {
             types: ['geocode'],
         });
 
         autocomplete.addListener('place_changed', searchNearbyPlaces)
-    }
+    }//end initMap
 
     document.getElementById('type').onchange = searchNearbyPlaces //now the list will update each time the drop down list is changed.
     document.getElementById('radius').onchange = searchNearbyPlaces //now the list will update each time the drop down list is changed.
@@ -85,7 +81,7 @@
 
         }, callback);
 
-    }
+    }//end searchNearbyPlaces
         //storing nearby search response results
     function callback(results, status) {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
@@ -94,7 +90,7 @@
                  createMarker(results[i]);
             }
         }
-    }
+    }//end callback
         //printing results to the application
     function createMarker(place) {
         console.log(place)
@@ -105,7 +101,7 @@
         var cell2 = row.insertCell(1);
         cell2.innerHTML = place.vicinity;
 
-    }
+    }//end createaMarker
 
-</script>
+</script> 
 </html>
