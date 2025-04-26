@@ -10,7 +10,7 @@ Ensure the current working directory is within the application folder. (RUN cd a
 
 RUN docker build -t dinner_wizard .
 
-<ul>make sure to include the '.' after 'dinner_wizard'above. </ul>
+&#10031; make sure to include the '.' after 'dinner_wizard'above.
 
 RUN docker run -p 3000:3000 dinner_wizard
 
