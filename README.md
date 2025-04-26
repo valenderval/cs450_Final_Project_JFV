@@ -1,4 +1,5 @@
-# Jacob Vallery - Bellarmine University - Capstone CS-450-ON
+# Jacob Vallery - Bellarmine University - Capstone 
+# CS-450-ON
 
 # Capstone : DinnerWizard 
 This Application runs on Docker with Node.js.
