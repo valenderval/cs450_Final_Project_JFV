@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DinnerWizard</title>
-   <!--- <link rel="stylesheet" type="text/css" href="./normalize.css" /> --->
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="./style.css"/>
 </head>
 
@@ -18,7 +16,6 @@
     </h1>
     <div class="background" id="map"></div>
     <div class="form-group">
-        <!--<label for="location">Enter a location:</label>-->
         <br><br>
         <input type="text" class="form-control" id="autocomplete" placeholder="Enter Location"/>
     </div>
@@ -56,7 +53,7 @@
     type="text/javascript" async defer>
     </script>
 
-<script> 
+<script>  //Creating the map after a location has been set.
     function initMap() {
         autocomplete = new google.maps.places.Autocomplete(document.getElementById('autocomplete'), {
             types: ['geocode'],
@@ -65,8 +62,9 @@
         autocomplete.addListener('place_changed', searchNearbyPlaces)
     }
 
-    document.getElementById('type').onchange = searchNearbyPlaces
-    document.getElementById('radius').onchange = searchNearbyPlaces
+    document.getElementById('type').onchange = searchNearbyPlaces //now the list will update each time the drop down list is changed.
+    document.getElementById('radius').onchange = searchNearbyPlaces //now the list will update each time the drop down list is changed.
+            //
     function searchNearbyPlaces() {
         document.getElementById('places').innerHTML = '';
 
@@ -77,19 +75,18 @@
             center: place.geometry.location,
             zoom: 15,
         });
-        // nearby Search
-
+            
+        // conducting the nearby search
         service = new google.maps.places.PlacesService(map);
         service.nearbySearch({
             location: place.geometry.location,
             radius: [document.getElementById('radius').value],
             types: [document.getElementById('type').value]
-            //includedTypes: [document.getElementById('type').value]
 
         }, callback);
 
     }
-
+        //storing nearby search response results
     function callback(results, status) {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             console.log(results.length);
@@ -98,7 +95,7 @@
             }
         }
     }
-
+        //printing results to the application
     function createMarker(place) {
         console.log(place)
         var table = document.getElementById('places');
