@@ -8,7 +8,7 @@ Once this repository is successfully cloned, navigate to the corresponding (dest
 
 Ensure the current working directory is within the application folder. (RUN cd application)
 
-&nbsp;RUN docker build -t dinner_wizard .
+&nbsp;&#10028;&nbsp;RUN docker build -t dinner_wizard .
 
 Make sure to include the '.' after 'dinner_wizard'above.
 
