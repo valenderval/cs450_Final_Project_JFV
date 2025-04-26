@@ -1,6 +1,7 @@
-# cs450_Final_Project_JFV
+# Jacob Vallery - Bellarmine University - Capstone CS-450-ON
+
 # Capstone : DinnerWizard
-This Application runs on Docker with Node.js.
+This Application runs on Docker with Node.js.<br>
 Verify both are downloaded to your system to ensure this application runs. 
 
 Once this repository is successfully cloned, navigate to the corresponding (destination) directory. 
