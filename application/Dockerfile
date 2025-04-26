@@ -1,4 +1,4 @@
-# Use an official Node.js runtime as the base image
+x# Use an official Node.js runtime as the base image
 FROM node:22-slim
 
 # Set the working directory inside the container
@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install
+RUN npm install express
 
 # Copy the rest of the application code
 COPY . .
