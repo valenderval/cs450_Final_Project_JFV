@@ -1,7 +1,7 @@
 # Jacob Vallery - Bellarmine University - Capstone CS-450-ON
 
 # Capstone : DinnerWizard
-This Application runs on Docker with Node.js.<br>
+This Application runs on Docker with Node.js.
 Verify both are downloaded to your system to ensure this application runs. 
 
 Once this repository is successfully cloned, navigate to the corresponding (destination) directory. 
@@ -10,7 +10,7 @@ Ensure the current working directory is within the application folder.
 
 RUN docker build -t dinner_wizard .
 
--make sure to include the '.' after <dinner_wizard> above. 
+<ul>make sure to include the '.' after 'dinner_wizard'above. </ul>
 
 RUN docker run -p 3000:3000 dinner_wizard
 
