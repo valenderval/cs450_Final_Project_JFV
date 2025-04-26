@@ -13,5 +13,6 @@ RUN docker build -t dinner_wizard .
 
 RUN docker run -p 3000:3000 dinner_wizard
 
+This will run the app on your local machine at http://localhost:3000
 
-
+Navigate to http://localhost:3000 on your browser to enjoy DinnerWizard!
