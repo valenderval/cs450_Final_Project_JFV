@@ -2,11 +2,11 @@
 
 # Capstone : DinnerWizard
 This Application runs on Docker with Node.js.
-Verify both are downloaded to your system to ensure this application runs. 
+Verify both are downloaded to your system to ensure this application runs correctly. 
 
 Once this repository is successfully cloned, navigate to the corresponding (destination) directory. 
 
-Ensure the current working directory is within the application folder. 
+Ensure the current working directory is within the application folder. (RUN cd application)
 
 RUN docker build -t dinner_wizard .
 
