@@ -8,11 +8,11 @@ Once this repository is successfully cloned, navigate to the corresponding (dest
 
 Ensure the current working directory is within the application folder. (RUN cd application)
 
-&nbsp;&#10028;&nbsp;RUN docker build -t dinner_wizard .
+&nbsp;&#10028;&nbsp;&nbsp;RUN docker build -t dinner_wizard .
 
-Make sure to include the '.' after 'dinner_wizard'above.
+Make sure to include the '.' after 'dinner_wizard' above.
 
-&nbsp;RUN docker run -p 3000:3000 dinner_wizard
+&nbsp;&#10028;&nbsp;&nbsp;RUN docker run -p 3000:3000 dinner_wizard
 
 This will run the app on your local machine at http://localhost:3000
 
