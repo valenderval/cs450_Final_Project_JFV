@@ -11,6 +11,15 @@ html {
   background-color: aliceblue;
 }
 
+.logo-image {
+  position: absolute;
+  border-radius: 25px;
+  top: 15%;
+  left: 35%;
+  width: 60%;
+  height: 77%;
+}
+
 .container {
   position: absolute;
   border-radius: 25px;
